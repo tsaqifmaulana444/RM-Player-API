@@ -17,7 +17,8 @@ const PlayersSchema = mongoose.Schema(
     },
     previous_club: {
       type: String,
-      required: [true, "Please Enter The Player Previous Club"],
+      required: false,
+      default: "-"
     },
   },
   {
