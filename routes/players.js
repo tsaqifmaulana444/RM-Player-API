@@ -37,8 +37,9 @@ router.post("/", async (req, res) => {
 router.get("/:id", async (req, res) => {
   try {
     const player = await Player.findById(req.params.id)
+    res.json(player)
   } catch (e) {
-    res.json({ message: e })
+    console.log(e)
   }
 })
 
