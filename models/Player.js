@@ -12,10 +12,15 @@ const PlayersSchema = mongoose.Schema(
       required: [true, "Please Enter The Player Nationality"],
     },
     shirt_number: {
-      type: String,
+      type: Number,
       required: [true, "Please Enter The Player Shirt Number"],
     },
     previous_club: {
+      type: String,
+      required: false,
+      default: "-"
+    },
+    picture: {
       type: String,
       required: false,
       default: "-"

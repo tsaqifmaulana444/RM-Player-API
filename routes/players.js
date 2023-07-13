@@ -21,6 +21,7 @@ router.post("/", async (req, res) => {
     nationality: req.body.nationality,
     shirt_number: req.body.shirt_number,
     previous_club: req.body.previous_club,
+    picture: req.body.picture,
   })
   try {
     const savePlayer = await player.save()
@@ -64,6 +65,7 @@ router.put("/:id", async (req, res) => {
           nationality: req.body.nationality,
           shirt_number: req.body.shirt_number,
           previous_club: req.body.previous_club,
+          picture: req.body.picture,
         },
       }
     )
